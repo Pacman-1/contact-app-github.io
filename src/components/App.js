@@ -5,6 +5,7 @@ import { BrowserRouter as Router ,Switch,Route } from 'react-router-dom';
 import Header from "./Header"
 import Addcontact from './addContact';
 import Contactlist from "./Contactlist"
+import ContactDetail from './ContactDetail';
 
 
 function App() {
@@ -38,13 +39,17 @@ function App() {
       <Router> 
       <Header/>
       <Switch> 
-      <Route path="/" exact component={()=> <Contactlist contacts={contacts} getContactId={removeContactHandler}/>}/>
-      <Route path="/add" component={() => <Addcontact addcontactHandler={addcontactHandler} />
-      }
+      <Route path="/" exact render={(props)=> (<Contactlist {...props} contacts={contacts} getContactId={removeContactHandler}/>)}
+      
       />
+
+      
+      <Route path="/add" render={(props)=>
+      (<Addcontact {...props} addcontactHandler={addcontactHandler}/>
+      )}
+      />
+      <Route path="/contact/:id" component ={ContactDetail}/> 
       </Switch>
-      {/*<Addcontact addcontactHandler={addcontactHandler}/>
-      <Contactlist contacts={contacts} getContactId={removeContactHandler}/>*/} 
       </Router>
       
     </div>
