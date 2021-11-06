@@ -1,0 +1,20 @@
+.card{
+    outline: none;
+    border: none;
+    border: 10px solid black;
+}
+.mg1{
+padding-top: 90px;
+}
+.mg2{
+    margin-top: 10px;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    margin: 70px;
+}
+.button1{
+    
+}
+
