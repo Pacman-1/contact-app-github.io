@@ -4,7 +4,7 @@ import { uuid } from 'uuidv4';
 import { BrowserRouter as Router ,Switch,Route } from 'react-router-dom';
 import Header from "./Header"
 import Addcontact from './addContact';
-import Contactlist from "./ContactList"
+import Contactlist from "./contactList"
 import ContactDetail from './ContactDetail';
 
 
